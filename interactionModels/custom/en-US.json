@@ -1,0 +1,366 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "prototype panda quiz",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "NumberOfPlayerIntent",
+          "slots": [
+            {
+              "name": "numberAnswer",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "playing {numberAnswer}",
+            "We are {numberAnswer} ",
+            "{numberAnswer}",
+            "players {numberAnswer}"
+          ]
+        },
+        {
+          "name": "ScoreIntent",
+          "slots": [],
+          "samples": [
+            "how many points do i have",
+            "how many points do player have",
+            "how many points",
+            "points",
+            "score",
+            "who is winning",
+            "am i winning",
+            "who is in last place",
+            "who is in first place",
+            "Who is in the lead",
+            "show score",
+            "what is the score",
+            "show scoreboard",
+            "what is my score"
+          ]
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "DoneIntent",
+          "slots": [],
+          "samples": [
+            "finito",
+            "finish",
+            "Dices have been rolled",
+            "done",
+            "I am done"
+          ]
+        },
+        {
+          "name": "AnswerIntent",
+          "slots": [
+            {
+              "name": "answer",
+              "type": "Answer",
+              "multipleValues": {
+                "enabled": false
+              }
+            }
+          ],
+          "samples": [
+            "the answer is ",
+            "it is",
+            "{answer}",
+            "what is {answer} answer",
+            "i think it is {answer} answer",
+            "my guess is {answer} answer",
+            "i am going to say {answer} answer",
+            "I\u0027m going for {answer}",
+            "I\u0027ll go for {answer}",
+            "That is {answer}",
+            "That\u0027s {answer}",
+            "it\u0027s {answer}",
+            "i think it\u0027s {answer}",
+            "I\u0027ll say {answer}",
+            "I\u0027m going to go for {answer}",
+            "I\u0027d say it\u0027s {answer}",
+            "I would say {answer}",
+            "it\u0027s probably {answer}",
+            "it\u0027s most likely {answer}",
+            "{answer} answer",
+            "that\u0027s the {answer} answer",
+            "it\u0027s {answer} answer",
+            " is it {answer} answer"
+          ]
+        },
+        {
+          "name": "RepeatIntent",
+          "slots": [],
+          "samples": [
+            "what was the question",
+            "repeat please",
+            "can i hear again",
+            "can u ask again",
+            "repeat",
+            "can you repeat the question"
+          ]
+        },
+        {
+          "name": "PassIntent",
+          "slots": [],
+          "samples": [
+            "Pass",
+            "I don\u0027t know"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Alaska"
+              }
+            },
+            {
+              "name": {
+                "value": "Morocco"
+              }
+            },
+            {
+              "name": {
+                "value": "A chain of islands",
+                "synonyms": [
+                  "Islands"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "sections of the lithosphere",
+                "synonyms": [
+                  "Lithosphere"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Germany"
+              }
+            },
+            {
+              "name": {
+                "value": "Bear",
+                "synonyms": [
+                  "grizzly"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Wyoming"
+              }
+            },
+            {
+              "name": {
+                "value": "K2",
+                "synonyms": [
+                  "k.2",
+                  "K two"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Chile"
+              }
+            },
+            {
+              "name": {
+                "value": "Hawaii"
+              }
+            },
+            {
+              "name": {
+                "value": "Atlantic ocean",
+                "synonyms": [
+                  "atlanter havet",
+                  "atlanter",
+                  "Atlantic"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Uluru"
+              }
+            },
+            {
+              "name": {
+                "value": "South Sudan",
+                "synonyms": [
+                  "Sudan"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Baffin island",
+                "synonyms": [
+                  "Baffin"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Lybia",
+                "synonyms": [
+                  "Libyen"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Andes Mountains",
+                "synonyms": [
+                  "Andes"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "biome"
+              }
+            },
+            {
+              "name": {
+                "value": "7",
+                "synonyms": [
+                  "seven"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Missouri river",
+                "synonyms": [
+                  "Missouri"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Oregon"
+              }
+            },
+            {
+              "name": {
+                "value": "Crater lake",
+                "synonyms": [
+                  "crater"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Charleston"
+              }
+            },
+            {
+              "name": {
+                "value": "Malbork castle",
+                "synonyms": [
+                  "Malbork"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Algeria"
+              }
+            },
+            {
+              "name": {
+                "value": "Vinnufossen"
+              }
+            },
+            {
+              "name": {
+                "value": "Ben Nevis"
+              }
+            },
+            {
+              "name": {
+                "value": "Canada"
+              }
+            },
+            {
+              "name": {
+                "value": "11",
+                "synonyms": [
+                  "eleven"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "copenhagen"
+              }
+            },
+            {
+              "name": {
+                "value": "russia"
+              }
+            },
+            {
+              "name": {
+                "value": "asia"
+              }
+            },
+            {
+              "name": {
+                "value": "stockholm"
+              }
+            }
+          ],
+          "name": "Answer"
+        }
+      ]
+    }
+  },
+  "version": "31"
+}
