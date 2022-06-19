@@ -17,6 +17,7 @@ let questionAsked = false;
 let nextPlayer;
 var dice;
 let firstRoll = true;
+let diceRegonizer = false;
 
 //Question and answer
 let questionIndex;
@@ -28,10 +29,10 @@ let totalQuestions;
 let winnerArray; 
 
 //API for google sheet documents - Include https://sheets.googleapis.com/v4/spreadsheets/ + sheet id + /values/ + sheetname ? + api key
-const contentX = "https://sheets.googleapis.com/v4/spreadsheets/1Z7foYz_5No5rCJwkut7bBG2OQYgEMEU5ODZYJ67klkc/values/'ContentX'?key=AIzaSyDXcPeQRiMaoLmBwT-8R5yI-ITmfWebkSk";
-const contentY = "https://sheets.googleapis.com/v4/spreadsheets/1Z7foYz_5No5rCJwkut7bBG2OQYgEMEU5ODZYJ67klkc/values/'ContentY'?key=AIzaSyDXcPeQRiMaoLmBwT-8R5yI-ITmfWebkSk";
-const diceID = "https://sheets.googleapis.com/v4/spreadsheets/1GhIuXgvov1nZ1Qz0XshtBApsxNM30hGUGn3w4CeOasA/values/'Ark1'?key=AIzaSyDXcPeQRiMaoLmBwT-8R5yI-ITmfWebkSk"
-const apiKey = "AIzaSyDXcPeQRiMaoLmBwT-8R5yI-ITmfWebkSk";
+const contentX = "https://sheets.googleapis.com/v4/spreadsheets/1Z7foYz_5No5rCJwkut7bBG2OQYgEMEU5ODZYJ67klkc/values/'ContentX'?key=" + apiKey;
+const contentY = "https://sheets.googleapis.com/v4/spreadsheets/1Z7foYz_5No5rCJwkut7bBG2OQYgEMEU5ODZYJ67klkc/values/'ContentY'?key=" + apiKey;
+const diceID = "https://sheets.googleapis.com/v4/spreadsheets/1GhIuXgvov1nZ1Qz0XshtBApsxNM30hGUGn3w4CeOasA/values/'Ark1'?key=" + apikey";
+const apiKey = "";
 
 //global arrays, the sheetdata and the array for storing players points.
 let sheetData;
@@ -163,6 +164,7 @@ const RollIntentHandler = {
     async handle(handlerInput) {
     
     //fecthes dice data
+	if(diceRegonizer == true) {
         await getRemoteData(diceID)
                 .then((response) => {
                   const data = JSON.parse(response);
@@ -172,6 +174,12 @@ const RollIntentHandler = {
                 console.log(`ERROR: ${err.message}`);
                
               });
+			  
+	}
+	else{
+		
+		dice = Math.floor(Math.random() * 11) + 2;
+	}
         
         let speakOutput;
     if(questionIndex < totalQuestions)
@@ -191,20 +199,7 @@ const RollIntentHandler = {
             currentAnswer = sheetData[questionIndex][1];
         }
     else{
-        //Only usefull for one round playing.
-        /*
-        let winner;
-        let currentscore = 0;
         
-        for(let i = 0; i < playerScoreBoard.length; i++) {
-            if(playerScoreBoard[i] > currentscore){
-                currentscore = playerScoreBoard[i];
-                winner = i;
-            }
-        }
-        
-        speakOutput = "Player " + (winner +1) + " won the game with a total of " + currentscore + "points! Congratulations and thanks for playing the flashcard game!";
-        */
         
         shuffleMatrix(sheetData);
         questionIndex = 0;
