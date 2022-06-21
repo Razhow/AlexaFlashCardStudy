@@ -11,5 +11,8 @@ Your google sheets should consist of 2 columns. column 1 containing questions/de
 
 
 The dice reconnizr is turned off by default if you want to enable it follow these steps:
-1. Set the diceReconizer variable to "true"
-2. 
+1. Set the diceRecognizer variable to "true"
+2. Create a Google Cloud Account and create a project
+3. Download your Service Account Credentials file and save it to your directory
+4. Enter the file name as the parameter to the credentials variable in GoogleApi.py
+5. Create a google sheet file and enter the name as the parameter to the sheet variable.
